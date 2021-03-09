@@ -1,0 +1,64 @@
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.todo-item {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    float: left;
+    border: solid 2px white;
+    box-sizing: border-box;
+}
+
+.example-enter {
+    opacity: 0.10;
+    height: 1px;
+    visibility: hidden;
+}
+
+.example-enter-active {
+    animation-name: slideDown;
+    animation-duration: 700ms;
+    animation-fill-mode: forwards;
+}
+
+.example-leave {
+    opacity: 1;
+    height: 100px;
+    visibility: visible;
+}
+
+.example-leave-active {
+    animation-name: slideUp;
+    animation-duration: 700ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideDown {
+    from {
+        visibility: hidden;
+        opacity: 0.10;
+        height: 1px;
+    }
+    to {
+        visibility: visible;
+        opacity: 1;
+        height: 100px;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        visibility: visible;
+        opacity: 1;
+        height: 100px;
+    }
+    to {
+        opacity: 0.1;
+        height: 1px;
+        visibility: hidden;
+    }
+}
